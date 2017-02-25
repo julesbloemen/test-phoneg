@@ -27,7 +27,7 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://cdn.jsdelivr.net/vue/1.0.16/vue.js 'unsafe-eval' 'unsafe-inline'" />
     <!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
@@ -38,19 +38,20 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
 </head>
 
 <body>
-    <div class="app">
-        <h1>302 online apps</h1>
-        <div id="deviceready" class="">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
-        </div>
+    <div id="vue-instance" class="app">
+        <h1>online applicaties</h1>
+        <button id="btn-get-random-word" class="btn btn-primary" @click="getRandomWord">Get Random Word</button>
+        <p>{{ randomWord }}</p>
+        <p v-show="test">test123</p>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="http://cdn.jsdelivr.net/vue/1.0.16/vue.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();

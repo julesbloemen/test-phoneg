@@ -2,10 +2,10 @@
 <widget id="com.drienultwee.testapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>302 online applicaties</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Super cool gaaf kicken tof
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@302.nl" href="http://302.nl">
+        302 online applicaties
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />

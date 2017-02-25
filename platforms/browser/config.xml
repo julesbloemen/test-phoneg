@@ -6,12 +6,15 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>302 online applicaties</name>
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <name>302 online applicaties</name>
+    <description>
+        Super cool gaaf kicken tof
+    </description>
+    <author email="info@302.nl" href="http://302.nl">
+        302 online applicaties
     </author>
     <content src="index.html" />
     <access origin="*" />

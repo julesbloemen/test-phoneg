@@ -20,6 +20,31 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        this.setupVue();
+    },
+
+    setupVue: function() {
+        var vm = new Vue({
+            el: "#vue-instance",
+            data: {
+                test: false,
+                randomWord: '',
+                words: [
+                    'formidable',
+                    'gracious',
+                    'daft',
+                    'mundane',
+                    'onomatopoeia'
+                ]
+            },
+            methods: {
+                getRandomWord: function() {
+                    var randomIndex = Math.floor(Math.random() * this.words.length);
+                    this.randomWord = this.words[randomIndex];
+                    this.test = true;
+                }
+            }
+        });
     },
     // Bind Event Listeners
     //
