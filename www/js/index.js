@@ -23,6 +23,8 @@ var app = {
         this.setupVue();
     },
 
+
+
     setupVue: function() {
         var vm = new Vue({
             el: "#vue-instance",
